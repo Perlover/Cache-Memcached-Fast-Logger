@@ -78,6 +78,8 @@ reading all log items to/from memcached
 
 =head1 SYNOPSIS
 
+    use Cache::Memcached::Fast::Logger;
+    
     my $logger = Cache::Memcached::Fast::Logger->new( cache => Cache::Memcached::Fast->new(...) );
 
     # one or more processes log items to memcached like this method:
