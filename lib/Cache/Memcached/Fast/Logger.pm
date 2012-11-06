@@ -60,11 +60,11 @@ reading all log items to/from memcached
 
     my $logger = Cache::Memcached::Fast::Logger->new( cache => Cache::Memcached::Fast->new(...) );
 
-    # one or more processes log items to memcached like this:
-    $logger->log( { key1 => 'value1', keys2 => 'value2' } );
+    # one or more processes log items to memcached like this method:
+    $logger->log( \%item );
 
     # Other process - a parser of logs items reads all items by:
-    $logger->read_all( sub { $item = shift; ... ; 1 } );
+    $logger->read_all( sub { $item_hashref = shift; ... ; 1 } );
 
 =head1 DESCRIPTION
 
@@ -115,9 +115,8 @@ This module uses a following keys for log items: I<log_counter> & I<log_N>,
 where N is positive number from 0 to max integer of perl. After not-terminated
 <L/read_all> process a C<log_counter> to be reseted to "0".
 
-You can use
-L<Cache::Memcached::Fast/namespace> option or method to isolate these keys from
-your other keys.
+You can use L<Cache::Memcached::Fast/namespace> option or same method to isolate
+these keys from your other keys.
 
 =head1 AUTHOR
 
