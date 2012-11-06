@@ -1,6 +1,9 @@
 Cache::Memcached::Fast::Logger
 ==============================
 
+Cache::Memcached::Fast::Logger - the simple logger object for writing and
+reading all log items to/from memcached
+
 INSTALLATION
 
 Latest release of this module is available from CPAN:

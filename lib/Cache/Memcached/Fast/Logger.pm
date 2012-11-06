@@ -53,7 +53,8 @@ __END__
 
 =head1 NAME
 
-Cache::Memcached::Fast::Logger - simple logger object for writing and reading all log items from memcached
+Cache::Memcached::Fast::Logger - the simple logger object for writing and
+reading all log items to/from memcached
 
 =head1 SYNOPSIS
 
